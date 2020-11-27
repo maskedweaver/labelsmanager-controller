@@ -1,0 +1,7 @@
+domain: rackbrains.io
+repo: github.com/nyambati/labelsmanager-controller
+resources:
+- group: labels
+  kind: Labels
+  version: v1beta1
+version: "2"

@@ -1,0 +1,13 @@
+apiVersion: labels.rackbrains.io/v1beta1
+kind: Labels
+metadata:
+  name: labels-sample
+spec:
+  labels:
+    platform: Values.unit_tag
+    env: Values.global.environment
+    region: Values.global.region
+    country: Values.global.country
+    app: Values.app
+    tribe: Values.tribe_tag
+    squad: Values.team
