@@ -2,10 +2,19 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+controller:
+  # controller.logLevel -- The log level of the controller. Can be either "DEBUG" or "INFO"
+  logLevel: DEBUG
+  # controller.leaderElection -- Enable leader election for running multiple controller pods
+  leaderElection: false
+  # controller.metricAddr -- Address to serve prometheus metrics on. "0" is disabled.
+  metricAddr: "0"
+  # controller.environment -- Any extra environment variables for the controller
+
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: rackbrains/labelsmanager
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
@@ -24,6 +33,7 @@ serviceAccount:
   name: ""
 
 podAnnotations: {}
+extraLabels: {}
 
 podSecurityContext: {}
   # fsGroup: 2000
